@@ -16,6 +16,7 @@
 
 </head>
 <body>
+<%--sf폼 일시 csrf토큰을 명시적으로 보내지 않아도 전송이 된다--%>
 <sf:form method="post" action="${pageContext.request.contextPath}/docreate" modelAttribute="offer">
     <table class="formtable">
         <tr>
