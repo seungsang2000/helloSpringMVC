@@ -1,9 +1,6 @@
 package kr.ac.hansung.cse.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -30,4 +27,10 @@ public class Offer {
 
     @Size(min=5, max=100, message="Text must be between 5 and 100 chars")
     private String text;
+
+    public Offer(String name, String email, String text) {
+        this.name = name;
+        this.email = email;
+        this.text = text;
+    }
 }

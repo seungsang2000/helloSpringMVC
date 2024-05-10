@@ -4,7 +4,6 @@ import kr.ac.hansung.cse.dao.OfferDao;
 import kr.ac.hansung.cse.model.Offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -18,7 +17,20 @@ public class OfferService {
         return offerDao.getOffers();
     }
 
-    public void insert(Offer offer) {
+    public Offer getOfferById(int id){
+        return offerDao.getOffer(id);
+    }
+    public void insertOffer(Offer offer) {
         offerDao.insert(offer);
     }
+
+    public void updateOffer(Offer offer) {
+        offerDao.update(offer);
+    }
+
+    public void deleteOffer(int id) {
+        offerDao.delete(id);
+    }
+
+
 }

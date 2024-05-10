@@ -28,7 +28,7 @@ public class StudentTest {
         student.setEmail("alice.Kim@hansung.ac.kr");
 
         // Persistent 상태로 전환
-        testEntityManager.persist(student);
+        testEntityManager.persist(student); //이때, id가 자동으로 생성됨.
 
         // ID를 사용하여 엔티티 조회
         Student persistedStudent = testEntityManager.find(Student.class, student.getId());
