@@ -1,7 +1,6 @@
 package kr.ac.hansung.cse.controller;
 
 import kr.ac.hansung.cse.exception.OfferNotFoundException;
-import kr.ac.hansung.cse.model.ErrorResponse;
 import kr.ac.hansung.cse.model.Offer;
 import kr.ac.hansung.cse.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.persistence.PostRemove;
-import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.List;
 
