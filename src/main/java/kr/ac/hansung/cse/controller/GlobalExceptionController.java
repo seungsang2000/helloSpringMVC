@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 
-@RestControllerAdvice
+@RestControllerAdvice // 전역으로 모든 컨트롤러에 적용
 public class GlobalExceptionController {
     @ExceptionHandler(OfferNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleOfferNotFoundexception(HttpServletRequest req, OfferNotFoundException ex){
